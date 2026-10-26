@@ -14,7 +14,12 @@ def calculate():
     # TODO: read the bill amount with entry.get() and turn it into a float. Work out
     #   a 15% tip and the total (bill + tip). Then show them, e.g.:
     #       result.config(text="Tip: $1.50   Total: $11.50")
-    pass
+    Text = 0.0
+    UInput = float(entry.get())
+    Text = UInput * 0.15
+    UInput = UInput + Text
+    result.config(text=f"Tip: ${Text:.2f}   Total: ${UInput:.2f}")
+    
 
 
 root = tk.Tk()
